@@ -7,8 +7,9 @@ package com.cqgcxy.casestudy.case1;
 public class Main {
     public static void main(String[] args) {
         TargetModel target=new TargetModel();
-        target.test1();
-        target.test2();
-        target.test3();
+        TargetProxy proxy=new TargetProxy();
+        proxy.delegateMethod(target, "test1");
+        proxy.delegateMethod(target, "test2");
+        proxy.delegateMethod(target, "test3");
     }
 }
