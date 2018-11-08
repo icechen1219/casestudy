@@ -7,6 +7,7 @@ package com.cqgcxy.casestudy.case2;
 public class Main {
     public static void main(String[] args) {
         DemoController demo = new DemoController();
+        DemoControllerProxy proxy = new DemoControllerProxy(demo);
         demo.testService();
     }
 }
