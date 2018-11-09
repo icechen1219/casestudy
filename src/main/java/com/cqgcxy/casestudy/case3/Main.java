@@ -26,17 +26,9 @@ public class Main {
 
     public void doPost(Map<String, Object> parameterMap) {
         UserVo user = new UserVo();
-        convert2User(parameterMap, user);
+        ReflectUtils.map2Entity(parameterMap, user);
 
         System.out.println(user);
-    }
-
-    private void convert2User(Map<String, Object> parameterMap, UserVo user) {
-        user.setUserId((Integer) parameterMap.get("userId"));
-        user.setUsername((String) parameterMap.get("username"));
-        user.setPassword((String) parameterMap.get("password"));
-        user.setAge((Integer) parameterMap.get("age"));
-        user.setDescription((String) parameterMap.get("description"));
     }
 
 }
